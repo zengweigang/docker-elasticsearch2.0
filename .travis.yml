@@ -22,8 +22,6 @@ cache:
   - $HOME/.m2
   - $HOME/.cache/pip
 before_script:
-- chmod +x docker/deploy.sh
-- mysql -uroot -p$RDS_PASSWD < doc/ucenter.sql
-- echo ${TRAVIS_BUILD_NUMBER}-${TRAVIS_COMMIT} > ucenter-service/src/main/resources/version
+- chmod +x deploy.sh
 notifications:
   slack: mokylin:oosoJ3GdRkatk8M7l65OkNxK
