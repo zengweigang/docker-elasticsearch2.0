@@ -43,6 +43,7 @@ COPY plugins /usr/share/elasticsearch/plugins
 VOLUME /usr/share/elasticsearch/data
 
 COPY docker-entrypoint.sh /
+RUN /usr/share/elasticsearch/bin/plugin install cloud-aws
 RUN chmod +x /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
